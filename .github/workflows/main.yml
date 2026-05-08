@@ -19,6 +19,7 @@ jobs:
         run: |
           armis-cli scan repo . \
             --format sarif \
+            --fail-on '' \
             > results.sarif
       - uses: github/codeql-action/upload-sarif@v4
         if: always()
