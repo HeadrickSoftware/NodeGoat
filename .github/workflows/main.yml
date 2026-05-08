@@ -33,7 +33,7 @@ jobs:
             const fs = require('fs');
 
             // Read SARIF results
-            const sarif = JSON.parse(fs.readFileSync('armis-results.sarif', 'utf8'));
+            const sarif = JSON.parse(fs.readFileSync('results.sarif', 'utf8'));
             const results = sarif.runs?.[0]?.results || [];
 
             // Count by severity - read from properties.severity if available
